@@ -1,0 +1,107 @@
+---
+title: "Introduction to Data Science"
+author: "Richard Conn - `rconn4554@floridapoly.edu`"
+subtitle: "Homework 1"
+output: html_notebook
+
+---
+
+
+# Problem 1 
+
+During class you completed an activity in which you practiced `git` commands and operations (such as forking a repository, cloning it using `git clone`, and uploading changes using `git push`).
+
+In this exercise you are asked to modify the `flpoly_student.md` file you worked during class, and format it using the **markdown** tools discussed in class. You must **create a table** that shows the courses you are currently enrolled in, using the headers: 
+
+- Prefix: in bold letters (such as **COP**)
+- Number: in bold letters (such as **2073**)
+- Name: in italics (such as _Introduction to Data Science_)
+- Credits (such as 3)
+
+
+
+a. Make sure your GitHub repo (`flpoly_DS_2020/`) shows the results of your updated file (remember to use the commands `git add .` , `git commit -m "YOUR MESSAGE"`, and `git push`) 
+
+
+| Prefix | Number  | Name                                 |Credits|
+|--------|---------|--------------------------------------|:-----:|
+|**COP** |**2073** |*Intro to Data Science*               |    3  |
+|**STA** |**3241** |*Statistical Learning*                |    3  |
+|**IDC** |**4943** |*Data Analytics Capstone 2*           |    3  |
+|**CAP** |**4763** |*Time Series Modeling and Forecasting*|    3  |
+
+Table: Caption goes here
+|Prefix
+b. Include a link to your GitHub repo in this document.
+
+[link GitHub repo](https://github.com/rconn4554/flpoly_DS_2020)
+ 
+c. Take a screenshot of the GitHub repo and include it in this document (you can save a copy of the screenshot file in your GitHub repo `flpoly_DS_2020/`)
+
+
+![GithubRepo](C:/Users/Bryce Conn/Desktop/Intro to Data Science/GitHubRepo.png)
+
+# Problem 2
+
+For this problem, you are asked to create a list of **3 concepts** you have learned about this semester, for at least 2 of the courses you are currently taking. Include the name of the course as a sub-heading (that is, using `##`), and the concepts as an unordered list. Make sure to include a link to information about the concept you listed.
+
+## Intro to Data Science
+* I learned Basic Markdown formatting.
+* I also was introduced to GitHub and learned some of the basics.
+
+## Statistical Learning
+* I learned some examples and the difference between supervised and unsupervised learning.
+
+_Edit this `.Rmd` file to include the solutions here._
+
+
+
+# Problem 3
+
+In this problem you will practice some basic R operations. Include solutions to each items by inserting a new R chunk of code (make sure you run the chunk so that the output is displayed)
+
+(a) Create a variable called `my_name` that contains your preferred name.
+```{r}
+my_name <- "Bryce Conn"
+```
+
+(b) Create a variable called `name_length` that holds how many letters are in `my_name`.
+```{r}
+name_length <- nchar(my_name)
+print(name_length)
+```
+
+
+(c) Show which value is bigger: $e^\pi$ or $\pi^e$. 
+```{r}
+e <- 2.71828
+num1 <- e^pi
+num2 <- pi^e
+max(num1, num2)
+```
+
+
+(d) Define a function called `add_tree` that takes a single argument and returns a value 3 times larger than the input.
+```{r}
+add_tree <- function(x){
+x=3*x
+return (x)}
+y <- add_tree(7)
+print(y)
+```
+
+(e) Use the colon operator `:` to create a vector `v` of numbers from 10 to 49. Find the length of this vector using the `length()` function.
+```{r}
+v <- c(10:49)
+length(v)
+```
+
+
+(f) Use the `seq()` function to produce a range of number from -5 to 10 in 0.5 increments.
+```{r}
+range <- seq(-5, 10, by = 0.5)
+print(range)
+```
+
+
+
